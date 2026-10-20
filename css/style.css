@@ -1,0 +1,104 @@
+/* style.css
+   Custom styling for the Breast Cancer Prediction Streamlit app.
+   Loaded via utils/styling.py -> st.markdown(..., unsafe_allow_html=True)
+*/
+
+:root {
+    --bcp-primary: #6a4c93;
+    --bcp-benign: #1d9e75;
+    --bcp-malignant: #d85a30;
+    --bcp-bg-card: rgba(127, 127, 127, 0.06);
+    --bcp-border: rgba(127, 127, 127, 0.18);
+}
+
+/* Page container spacing */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Card component used across pages */
+.bcp-card {
+    background: var(--bcp-bg-card);
+    border: 1px solid var(--bcp-border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Result banner - benign */
+.bcp-result-benign {
+    background: rgba(29, 158, 117, 0.12);
+    border: 1px solid rgba(29, 158, 117, 0.4);
+    color: var(--bcp-benign);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* Result banner - malignant */
+.bcp-result-malignant {
+    background: rgba(216, 90, 48, 0.12);
+    border: 1px solid rgba(216, 90, 48, 0.4);
+    color: var(--bcp-malignant);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* Metric chips */
+.bcp-metric-chip {
+    display: inline-block;
+    background: var(--bcp-bg-card);
+    border: 1px solid var(--bcp-border);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    font-size: 0.95rem;
+}
+
+/* Disclaimer box */
+.bcp-disclaimer {
+    background: rgba(216, 90, 48, 0.08);
+    border-left: 4px solid var(--bcp-malignant);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+}
+
+/* Sidebar branding */
+.bcp-sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.bcp-sidebar-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.stButton > button {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 640px) {
+    .bcp-result-benign, .bcp-result-malignant {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+}
